@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Mortgage</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--Header-->
+    <header class = 'top-header'>
+        <div class='top-header__logo'>Before Closing</div>
+        <div class='top-header__nav'>
+            <a href="#">Sign Up</a>
+        </div>
+
+    </header>
+
+    <!--Main Container-->
+    <main class='main-page'>
+
+        <!--Left Side Content-->
+        <section class='main-page___left'>
+
+            <form>
+                <section class ='forms-two-col'>
+                    <!--Price-->
+                    <div class='form-group'>
+                        <label class='form-group__label'>Price</label>
+                        <input name='price' class='form-group__textInput' value='$300,000' >
+                    </div>
+                     <!--Loan Years-->
+                    <div class='form-group'>
+                        <label class='form-group__label'>Loan Years</label>
+                        <input name='loan-years' class='form-group__textInput' value='30' >
+                    </div>
+                </section> 
+
+                <!--Down Payment-->
+                <section class='form-group'>
+                    <label class='form-group__label'>Down Payment</label>
+                    <div class='form-group__range-group'>
+                        <div class='form-group__range-slide-container'>
+                            <input name='down-payment' class='form-group__range-slide' type='range' value='20' min='0' max='100' step='1'>
+                            <div class='form-group__range-values'>
+                                <span class='form-group__range-start'>0%</span>
+                                <span class='form-group__range-end'>100%</span>
+                            </div>
+                        </div>
+                        <span class='form-group__range-total total_down_payment'>20%</span>
+                    </div>
+                </section>
+
+                <!--Interest Rate-->
+                <section class='form-group'>
+                    <label class='form-group__label'>Interest Rate</label>
+                    <div class='form-group__range-group'>
+                        <div class='form-group__range-slide-container'>
+                            <input name='interest-rate' class='form-group__range-slide' type='range' value='3.25' min='0' max='10' step='0.01'>
+                            <div class='form-group__range-values'>
+                                <span class='form-group__range-start'>0%</span>
+                                <span class='form-group__range-end'>10%</span>
+                            </div>
+                        </div>
+                        <span class='form-group__range-total total_interest_rate'>3.25%</span>
+                    </div>
+                </section>
+
+                <!--Property Taxes-->
+                <section class='form-group'>
+                    <label class='form-group__label'>Property Taxes/Year</label>
+                    <div class='form-group__range-group'>
+                        <div class='form-group__range-slide-container'>
+                            <input name='property-taxes' class='form-group__range-slide' type='range' value='1.80' min='0' max='3' step='0.01'>
+                            <div class='form-group__range-values'>
+                                <span class='form-group__range-start'>0%</span>
+                                <span class='form-group__range-end'>3%</span>
+                            </div>
+                        </div>
+                        <span class='form-group__range-total total_property_tax'>1.8%</span>
+                    </div>
+                </section>
+
+                <!--Home Insurance-->
+                <section class='form-group'>
+                    <label class='form-group__label'>Home Insurance/Year</label>
+                    <div class='form-group__range-group'>
+                        <div class='form-group__range-slide-container'>
+                            <input name='home-insurance' class='form-group__range-slide' type='range' value='1500' min='0' max='5000' step='1'>
+                            <div class='form-group__range-values'>
+                                <span class='form-group__range-start'>0</span>
+                                <span class='form-group__range-end'>5000</span>
+                            </div>
+                        </div>
+                        <span class='form-group__range-total total_home_insurance'>$1500</span>
+                    </div>
+                </section>
+
+                <!--Home Owner Association-->
+                <section class='form-group'>
+                    <label class='form-group__label'>HOA/Year</label>
+                    <div class='form-group__range-group'>
+                        <div class='form-group__range-slide-container'>
+                            <input name='hoa' class='form-group__range-slide' type='range' value='900' min='0' max='5000' step='1'>
+                            <div class='form-group__range-values'>
+                                <span class='form-group__range-start'>0</span>
+                                <span class='form-group__range-end'>5000</span>
+                            </div>
+                        </div>
+                        <span class='form-group__range-total total_hoa'>$900</span>
+                    </div>
+                </section>
+                <div class='form-group'>
+                    <button class='form-group__button'>Get Results</button>
+                </div>
+            </form>
+
+        </section>
+
+        <!--Right Side Content-->
+        <section class='main-page___right'>
+
+            <img src="img/home.jpeg" width="1260" height="750"alt="Beautiful modern farm house">
+
+            <section class='main-results'>
+                <div class='main-results__container'>
+                    
+                    <div class='main-results__chart'>
+                        <canvas id='myChart' width='400' height='400'></canvas>
+                    </div>
+
+                    <section class='info'>
+                        <h2 class='info__title'>Mortgage Details</h2>
+                        <div class='info__details'>
+                            <label class='info__label'>Principal & Interest</label>
+                            <span class='info__numbers info__numbers--principal'>$1,600</span>
+                        </div>
+                        <div class='info__details'>
+                            <label class='info__label'>Property Taxes</label>
+                            <span class='info__numbers info__numbers--property_taxes'>$450</span>
+                        </div>
+                        <div class='info__details'>
+                            <label class='info__label'>Home Insurance</label>
+                            <span class='info__numbers info__numbers--home_insurance'>$95</span>
+                        </div>
+                        <div class='info__details'>
+                            <label class='info__label'>HOA</label>
+                            <span class='info__numbers info__numbers--hoa'>$75</span>
+                        </div>
+
+                        <div class='info__total'>
+                            <label class='info__label'>Total</label>
+                            <label class='info__numbers infor__numbers--total'>$2220</label>
+
+                        </div>
+
+                    </section>
+
+
+
+                </div>
+            </section>
+
+        </section>
+   
+
+    </main>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
