@@ -6,7 +6,7 @@ A mortgage calculator that lets users quickly find the monthly mortgage payment.
 
 **Link to project:** https://everymortgage.netlify.app/
 
-![alt tag](http://placecorgi.com/1200/650)
+![](https://github.com/derekdevs4days/Every-Mortgage-Calculator/blob/main/gif2.gif)
 
 ## How It's Made:
 
