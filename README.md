@@ -1,5 +1,3 @@
-# Every-Mortgage-Calculator
-Mortgage calculator web app made with HTML, CSS, &amp; JavaScript
 
 # Every-Mortgage-Calculator
 A mortgage calculator that lets users quickly find the monthly mortgage payment.
